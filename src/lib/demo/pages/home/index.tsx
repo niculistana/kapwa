@@ -40,7 +40,11 @@ const HomePage: React.FC = () => {
             <div className='p-6 md:p-8 border-b border-gray-200'>
               <h1 className='text-3xl font-bold text-gray-900'>Home</h1>
               <p className='mt-2 text-gray-800'>
-                Welcome to Kapwa: Design System for BetterGov.ph
+                Welcome to Kapwa a Design System for Government Portals. Explore
+                our comprehensive design resources, including components,
+                blocks, and tokens. Whether you&apos;re a designer or a
+                developer, Kapwa provides the tools you need to build better
+                digital experiences.
               </p>
             </div>
 
