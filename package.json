@@ -22,7 +22,9 @@
     "preview": "vite preview --config vite.config-site.ts",
     "prepare": "husky",
     "registry:build": "shadcn build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "local-registry:publish": "npm run build-lib && npm publish --registry http://localhost:4873",
+    "local-registry:unpublish": "npm unpublish @bettergov/kapwa --registry http://localhost:4873 --force"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
