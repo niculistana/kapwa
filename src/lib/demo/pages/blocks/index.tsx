@@ -168,10 +168,6 @@ const Blocks: React.FC = () => {
         <Card className='mb-8'>
           <CardContent>
             <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-              <CodeBlock>{libraryInstallCommands.list.shadcn}</CodeBlock>
-            </div>
-            <div className='grid grid-cols-1 mb-8'>
               <p className='text-sm font-semibold'>Installation via NPM:</p>
               <CodeBlock>{libraryInstallCommands.list.npm}</CodeBlock>
             </div>
@@ -186,10 +182,6 @@ const Blocks: React.FC = () => {
 
         <Card className='mb-8'>
           <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-              <CodeBlock>{libraryInstallCommands.table.shadcn}</CodeBlock>
-            </div>
             <div className='grid grid-cols-1 mb-8'>
               <p className='text-sm font-semibold'>Installation via NPM:</p>
               <CodeBlock>{libraryInstallCommands.table.npm}</CodeBlock>
@@ -209,10 +201,6 @@ const Blocks: React.FC = () => {
 
         <Card className='mb-8'>
           <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-              <CodeBlock>{libraryInstallCommands.article.shadcn}</CodeBlock>
-            </div>
             <div className='grid grid-cols-1 mb-8'>
               <p className='text-sm font-semibold'>Installation via NPM:</p>
               <div className='space-y-4'>
@@ -234,10 +222,6 @@ const Blocks: React.FC = () => {
         <Card className='mb-8'>
           <CardContent>
             <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-              <CodeBlock>{libraryInstallCommands.banners.shadcn}</CodeBlock>
-            </div>
-            <div className='grid grid-cols-1 mb-8'>
               <p className='text-sm font-semibold'>Installation via NPM:</p>
               <div className='space-y-4'>
                 <CodeBlock>{libraryInstallCommands.stripBanner.npm}</CodeBlock>
@@ -257,10 +241,6 @@ const Blocks: React.FC = () => {
         />
         <Card className='mb-8'>
           <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-              <CodeBlock>{libraryInstallCommands.biography.shadcn}</CodeBlock>
-            </div>
             <div className='grid grid-cols-1 mb-8'>
               <p className='text-sm font-semibold'>Installation via NPM:</p>
               <CodeBlock>{libraryInstallCommands.biography.npm}</CodeBlock>

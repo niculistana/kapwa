@@ -147,10 +147,6 @@ const Components: React.FC = () => {
             </div>
           </div>
           <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-            <CodeBlock>{libraryInstallCommands.card.shadcn}</CodeBlock>
-          </div>
-          <div className='grid grid-cols-1 mb-8'>
             <p className='text-sm font-semibold'>Installation via NPM:</p>
             <CodeBlock>{libraryInstallCommands.card.npm}</CodeBlock>
           </div>
@@ -211,10 +207,6 @@ const Components: React.FC = () => {
             </div>
           </div>
           <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-            <CodeBlock>{libraryInstallCommands.button.shadcn}</CodeBlock>
-          </div>
-          <div className='grid grid-cols-1 mb-8'>
             <p className='text-sm font-semibold'>Installation via NPM:</p>
             <CodeBlock>{libraryInstallCommands.button.npm}</CodeBlock>
           </div>
@@ -265,10 +257,6 @@ const Components: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via ShadCN:</p>
-            <CodeBlock>{libraryInstallCommands.banner.shadcn}</CodeBlock>
           </div>
           <div className='grid grid-cols-1 mb-8'>
             <p className='text-sm font-semibold'>Installation via NPM:</p>
