@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/bettergovph/kapwa/compare/v1.2.2...v1.2.3) (2026-02-27)
+
+### Bug Fixes
+
+- apply copilot fixes ([80d4dec](https://github.com/bettergovph/kapwa/commit/80d4dec14baf25cf956223e3f381d3f85b44315b))
+
 ## [1.2.2](https://github.com/bettergovph/kapwa/compare/v1.2.1...v1.2.2) (2026-02-21)
 
 ### Bug Fixes
