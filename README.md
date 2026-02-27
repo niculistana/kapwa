@@ -1,6 +1,6 @@
 # Kapwa Design System
 
-_A design system for bettergov.ph_
+_A design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 
@@ -26,11 +26,12 @@ _A design system for bettergov.ph_
    @import 'tailwindcss';
    @import 'tw-animate-css';
 
-   + @source './node_modules/@bettergov/kapwa';
-   + @import '@bettergov/kapwa/kapwa.css';
+   + @source '../node_modules/@bettergov/kapwa/dist';
+   + @import '@bettergov/kapwa/styles';
    ```
 
    > _Without the @source you can't use @bettergov/kapwa's tailwind classes (i.e. kapwa colors, spacing, and others)_
+   > See: https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources
 
 #### Loading Kapwa's fonts
 
@@ -52,7 +53,7 @@ It's better to have consumers load Kapwa's fonts themselves because:
    export const kapwaSans = Inter({
      subsets: ['latin'],
      weight: ['400', '500', '600', '700'],
-     variable: '--font-kapw-sans',
+     variable: '--font-kapwa-sans',
      display: 'swap',
    });
 
@@ -82,8 +83,8 @@ It's better to have consumers load Kapwa's fonts themselves because:
     @import 'tailwindcss';
     @import 'tw-animate-css';
 
-    @source './node_modules/@bettergov/kapwa';
-    @import '@bettergov/kapwa/kapwa.css';
+   @source '../node_modules/@bettergov/kapwa/dist';
+    @import '@bettergov/kapwa/styles';
 
 
     @theme inline {
