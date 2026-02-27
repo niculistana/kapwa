@@ -12,6 +12,9 @@ import {
   FullBannerItem,
 } from '../../blocks/banners';
 import { BiographySection, BiographyProfile } from '../../blocks/biography';
+import { CodeBlock } from '@ui/CodeBlock';
+import { libraryInstallCommands } from '@pages/utils/install-commands';
+import { Card, CardContent } from '@kapwa/card';
 
 const Blocks: React.FC = () => {
   const searchResults: ListSectionItem[] = [
@@ -162,11 +165,29 @@ const Blocks: React.FC = () => {
           externalLinkText='View'
         />
 
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Installation via NPM:</p>
+              <CodeBlock>{libraryInstallCommands.list.npm}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
+
         <TablesSection
           title='Tables'
           subtitle='Table styles for data presentation'
           tableData={tableData}
         />
+
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Installation via NPM:</p>
+              <CodeBlock>{libraryInstallCommands.table.npm}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
 
         <ArticlesSection
           headerTitle='Article Components'
@@ -178,6 +199,17 @@ const Blocks: React.FC = () => {
           articleContent={articleContent}
         />
 
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Installation via NPM:</p>
+              <div className='space-y-4'>
+                <CodeBlock>{libraryInstallCommands.article.npm}</CodeBlock>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         <BannersSection
           headerTitle='Banner Components'
           headerSubtitle='Banner and call-to-action components for community engagement'
@@ -187,6 +219,19 @@ const Blocks: React.FC = () => {
           fullBanner={fullBanner}
         />
 
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Installation via NPM:</p>
+              <div className='space-y-4'>
+                <CodeBlock>{libraryInstallCommands.stripBanner.npm}</CodeBlock>
+                <CodeBlock>
+                  {libraryInstallCommands.civicTechBanner.npm}
+                </CodeBlock>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
         <BiographySection
           headerTitle='Official Biography'
           headerSubtitle='Government official profile and biography layout'
@@ -194,6 +239,14 @@ const Blocks: React.FC = () => {
           contactButtonText='Contact Office'
           websiteButtonText='Visit Website'
         />
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Installation via NPM:</p>
+              <CodeBlock>{libraryInstallCommands.biography.npm}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

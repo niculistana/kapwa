@@ -44,7 +44,7 @@ const BiographySection: React.FC<BiographySectionProps> = ({
   websiteButtonText = 'Visit Website',
 }: BiographySectionProps) => {
   return (
-    <Card>
+    <Card className='mb-8'>
       <CardHeader>
         <h2 className='text-2xl font-semibold'>{headerTitle}</h2>
         {headerSubtitle && <p className='text-gray-800'>{headerSubtitle}</p>}

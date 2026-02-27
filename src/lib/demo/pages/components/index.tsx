@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardHeader, CardContent } from '@kapwa/card';
 import { Button } from '@kapwa/button';
 import { Banner } from '@kapwa/banner';
+import { CodeBlock } from '@ui/CodeBlock';
+import { libraryInstallCommands } from '../utils/install-commands';
 
 const Components: React.FC = () => {
   return (
@@ -144,6 +146,10 @@ const Components: React.FC = () => {
               </div>
             </div>
           </div>
+          <div className='grid grid-cols-1 mb-8'>
+            <p className='text-sm font-semibold'>Installation via NPM:</p>
+            <CodeBlock>{libraryInstallCommands.card.npm}</CodeBlock>
+          </div>
         </div>
         <div className='bg-white rounded-lg shadow-xs my-8 p-8'>
           <div className='grid grid-cols-1 mb-8'>
@@ -200,6 +206,10 @@ const Components: React.FC = () => {
               </div>
             </div>
           </div>
+          <div className='grid grid-cols-1 mb-8'>
+            <p className='text-sm font-semibold'>Installation via NPM:</p>
+            <CodeBlock>{libraryInstallCommands.button.npm}</CodeBlock>
+          </div>
         </div>
         <div className='bg-white rounded-lg shadow-xs my-8 p-8'>
           <div className='grid grid-cols-1 mb-8'>
@@ -247,6 +257,10 @@ const Components: React.FC = () => {
                 />
               </div>
             </div>
+          </div>
+          <div className='grid grid-cols-1 mb-8'>
+            <p className='text-sm font-semibold'>Installation via NPM:</p>
+            <CodeBlock>{libraryInstallCommands.banner.npm}</CodeBlock>
           </div>
         </div>
       </div>
