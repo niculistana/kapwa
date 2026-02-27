@@ -12,7 +12,7 @@ import {
   FullBannerItem,
 } from '../../blocks/banners';
 import { BiographySection, BiographyProfile } from '../../blocks/biography';
-import { CodeBlock } from '../../ui/CodeBlock';
+import { CodeBlock } from '@ui/CodeBlock';
 import { libraryInstallCommands } from '@pages/utils/install-commands';
 import { Card, CardContent } from '@kapwa/card';
 
