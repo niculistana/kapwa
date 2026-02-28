@@ -214,7 +214,9 @@ const Blocks: React.FC = () => {
           <Card className='mb-8'>
             <CardContent>
               <div className='grid grid-cols-1 mb-8'>
-                <p className='text-sm font-semibold'>Installation via NPM:</p>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
                 <CodeBlock>
                   {libraryInstallCommands.officialBiography.import}
                 </CodeBlock>
