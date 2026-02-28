@@ -30,7 +30,7 @@ const List = ({
   listItems: ListSectionItem[];
 }) => {
   return (
-    <Card className='mb-8'>
+    <Card>
       <CardHeader>
         <h2 className='text-2xl font-semibold'>{headerTitle}</h2>
         {headerSubtitle && <p className='text-gray-800'>{headerSubtitle}</p>}

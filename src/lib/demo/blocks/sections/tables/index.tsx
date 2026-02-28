@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, TableDataItem } from '@kapwa/table';
+import { Card, CardContent } from '@kapwa/card';
 
 type TablesSectionProps = {
   title: string;
@@ -13,7 +14,11 @@ const TablesSection: React.FC<TablesSectionProps> = ({
   tableData,
 }: TablesSectionProps) => {
   return (
-    <Table title={title} subtitle={subtitle || ''} tableData={tableData} />
+    <Card className='mb-2'>
+      <CardContent>
+        <Table title={title} subtitle={subtitle || ''} tableData={tableData} />
+      </CardContent>
+    </Card>
   );
 };
 

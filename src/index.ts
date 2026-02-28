@@ -9,6 +9,7 @@ export * from './lib/kapwa/civic-tech-banner';
 export * from './lib/kapwa/input';
 export * from './lib/kapwa/label';
 export * from './lib/kapwa/list';
+export * from './lib/kapwa/official-biography';
 export * from './lib/kapwa/strip-banner';
 export * from './lib/kapwa/table';
 export * from './lib/kapwa/utils';

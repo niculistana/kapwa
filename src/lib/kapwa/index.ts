@@ -8,6 +8,7 @@ import { StripBanner } from './strip-banner';
 import { Table } from './table';
 import { List } from './list';
 import { ArticleCard, ArticleContent } from './article';
+import { OfficialBiography } from './official-biography';
 
 export {
   Banner,
@@ -25,4 +26,5 @@ export {
   List,
   ArticleCard,
   ArticleContent,
+  OfficialBiography,
 };

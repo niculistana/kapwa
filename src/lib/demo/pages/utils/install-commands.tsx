@@ -1,32 +1,38 @@
 export const libraryInstallCommands = {
   article: {
-    npm: `npm install @kapwa/article`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { ArticleCard, ArticleContent } from '@bettergov/kapwa/article';`,
   },
   banner: {
-    npm: `npm install @kapwa/banner`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { Banner } from '@bettergov/kapwa/banner';`,
   },
-  banners: {
-    npm: `npm install @kapwa/banners`,
-  },
-  biography: {
-    npm: `npm install @kapwa/biography`,
+  officialBiography: {
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { OfficialBiography, BiographyProfile } from '@bettergov/kapwa/official-biography';`,
   },
   button: {
-    npm: `npm install @kapwa/button`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { Button } from '@bettergov/kapwa/button';`,
   },
   card: {
-    npm: `npm install @kapwa/card`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { Card } from '@bettergov/kapwa/card';`,
   },
   civicTechBanner: {
-    npm: `npm install @kapwa/civic-tech-banner`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { CivicTechBanner } from '@bettergov/kapwa/civic-tech-banner';`,
   },
   list: {
-    npm: `npm install @kapwa/list`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { List } from '@bettergov/kapwa/list';`,
   },
   stripBanner: {
-    npm: `npm install @kapwa/strip-banner`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { StripBanner } from '@bettergov/kapwa/strip-banner';`,
   },
   table: {
-    npm: `npm install @kapwa/table`,
+    npm: `npm install @bettergov/kapwa`,
+    import: `import { Table } from '@bettergov/kapwa/table';`,
   },
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { List } from '@kapwa/list';
+import { Card, CardContent } from '@kapwa/card';
 
 type ListSectionItem = {
   id: number;
@@ -23,13 +24,17 @@ const ListsSection: React.FC<ListsSectionProps> = ({
   listItems,
 }: ListsSectionProps) => {
   return (
-    <List
-      title={title}
-      headerTitle={headerTitle}
-      headerSubtitle={headerSubtitle}
-      externalLinkText={externalLinkText}
-      listItems={listItems}
-    />
+    <Card className='mb-2'>
+      <CardContent>
+        <List
+          title={title}
+          headerTitle={headerTitle}
+          headerSubtitle={headerSubtitle}
+          externalLinkText={externalLinkText}
+          listItems={listItems}
+        />
+      </CardContent>
+    </Card>
   );
 };
 

@@ -56,7 +56,7 @@ const BannersSection: React.FC<BannersSectionProps> = ({
   fullBanner,
 }: BannersSectionProps) => {
   return (
-    <Card className='mb-8'>
+    <Card className='mb-2'>
       <CardHeader>
         <h2 className='text-2xl font-semibold'>{headerTitle}</h2>
         {headerSubtitle && <p className='text-gray-800'>{headerSubtitle}</p>}

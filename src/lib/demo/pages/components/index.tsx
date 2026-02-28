@@ -10,7 +10,7 @@ const Components: React.FC = () => {
     <div className='min-h-screen bg-gray-50 py-12'>
       <div className='container mx-auto px-4'>
         <h1 className='text-3xl font-bold text-gray-900 pb-2'>Components</h1>
-        <div className='bg-white rounded-lg shadow-xs my-8 p-8'>
+        <div className='bg-white rounded-lg shadow-xs mb-2 mt-8 p-8'>
           <div className='grid-cols-1 mb-8'>
             <h2 className='text-2xl font-semibold'>Card</h2>
             <p>Generic card component with header and content sections.</p>
@@ -146,12 +146,16 @@ const Components: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via NPM:</p>
-            <CodeBlock>{libraryInstallCommands.card.npm}</CodeBlock>
-          </div>
         </div>
-        <div className='bg-white rounded-lg shadow-xs my-8 p-8'>
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Importing the component:</p>
+              <CodeBlock>{libraryInstallCommands.card.import}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
+        <div className='bg-white rounded-lg shadow-xs mb-2 p-8'>
           <div className='grid grid-cols-1 mb-8'>
             <h2 className='text-2xl font-semibold'>Button</h2>
             <p>Generic button component with various styles and sizes.</p>
@@ -206,12 +210,16 @@ const Components: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via NPM:</p>
-            <CodeBlock>{libraryInstallCommands.button.npm}</CodeBlock>
-          </div>
         </div>
-        <div className='bg-white rounded-lg shadow-xs my-8 p-8'>
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Importing the component:</p>
+              <CodeBlock>{libraryInstallCommands.button.import}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
+        <div className='bg-white rounded-lg shadow-xs mb-2 p-8'>
           <div className='grid grid-cols-1 mb-8'>
             <h2 className='text-2xl font-semibold'>Banner</h2>
             <p className='text-gray-800'>
@@ -258,11 +266,15 @@ const Components: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 mb-8'>
-            <p className='text-sm font-semibold'>Installation via NPM:</p>
-            <CodeBlock>{libraryInstallCommands.banner.npm}</CodeBlock>
-          </div>
         </div>
+        <Card className='mb-8'>
+          <CardContent>
+            <div className='grid grid-cols-1 mb-8'>
+              <p className='text-sm font-semibold'>Importing the component:</p>
+              <CodeBlock>{libraryInstallCommands.banner.import}</CodeBlock>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

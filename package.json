@@ -167,6 +167,12 @@
       "require": "./dist/kapwa/list/index.tsx.cjs",
       "default": "./dist/kapwa/list/index.tsx.js"
     },
+    "./official-biography": {
+      "types": "./dist/kapwa/official-biography/index.d.ts",
+      "import": "./dist/kapwa/official-biography/index.tsx.js",
+      "require": "./dist/kapwa/official-biography/index.tsx.cjs",
+      "default": "./dist/kapwa/official-biography/index.tsx.js"
+    },
     "./strip-banner": {
       "types": "./dist/kapwa/strip-banner/index.d.ts",
       "import": "./dist/kapwa/strip-banner/index.tsx.js",
@@ -217,6 +223,9 @@
       ],
       "list": [
         "./dist/kapwa/list/index.d.ts"
+      ],
+      "official-biography": [
+        "./dist/kapwa/official-biography/index.d.ts"
       ],
       "strip-banner": [
         "./dist/kapwa/strip-banner/index.d.ts"
