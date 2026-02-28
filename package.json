@@ -23,8 +23,8 @@
     "prepare": "husky",
     "registry:build": "shadcn build",
     "semantic-release": "semantic-release",
-    "local-registry:publish": "npm run build-lib && npm publish --registry http://localhost:4873",
-    "local-registry:unpublish": "npm unpublish @bettergov/kapwa --registry http://localhost:4873 --force"
+    "local-registry:publish": "npm run build-lib && npm publish",
+    "local-registry:unpublish": "npm unpublish @bettergov/kapwa --force"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.7.0",

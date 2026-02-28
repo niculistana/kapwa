@@ -4,7 +4,7 @@ _A design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 
-1. [Install tailwindcss and @tailwindcss/vite](https://tailwindcss.com/docs/installation/using-vite). Configure vite-plugin with Tailwind
+1. Install Tailwind CSS using the adapter for your bundler (for example, [`@tailwindcss/vite`](https://tailwindcss.com/docs/installation/using-vite) or [`@tailwindcss/postcss`](https://tailwindcss.com/docs/installation)). Follow the Tailwind docs to configure your build tool.
 
 2. Install Kapwa
 
