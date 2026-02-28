@@ -110,8 +110,14 @@
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
-    "./styles": {
+    "./default-styles": {
+      "style": "./dist/index.css"
+    },
+    "./theme-styles": {
       "style": "./dist/kapwa.css"
+    },
+    "./theme-fonts": {
+      "style": "./dist/kapwa-fonts.css"
     },
     "./article": {
       "types": "./dist/kapwa/article/index.d.ts",

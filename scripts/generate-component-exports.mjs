@@ -42,11 +42,23 @@ async function generateComponentExports() {
   typesVersionsMap['.'] = ['./dist/index.d.ts'];
   console.log('  ✓ . (main)');
 
-  exportsMap['./styles'] = {
+  exportsMap['./default-styles'] = {
+    style: './dist/index.css',
+  };
+
+  console.log('  ✓ ./default-styles');
+
+  exportsMap['./theme-styles'] = {
     style: './dist/kapwa.css',
   };
 
-  console.log('  ✓ ./styles');
+  console.log('  ✓ ./theme-styles');
+
+  exportsMap['./theme-fonts'] = {
+    style: './dist/kapwa-fonts.css',
+  };
+
+  console.log('  ✓ ./theme-fonts');
 
   // Scan components
   console.log('🔍 Scanning components in src/lib/kapwa/...');

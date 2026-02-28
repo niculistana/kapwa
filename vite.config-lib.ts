@@ -8,23 +8,58 @@ import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const copyKapwaCssPlugin = (): PluginOption => ({
-  name: 'copy-kapwa-css',
+const copyDefaultCssPlugin = (): PluginOption => ({
+  name: 'copy-default-css',
   apply: 'build',
   closeBundle() {
-    const sourcePath = path.resolve(__dirname, './src/styles/kapwa.css');
+    const sourcePath = path.resolve(__dirname, './src/styles/index.css');
     const destinationDir = path.resolve(__dirname, './dist');
-    const destinationPath = path.resolve(destinationDir, 'kapwa.css');
+    const destinationPath = path.resolve(destinationDir, 'index.css');
 
     if (!fs.existsSync(sourcePath)) {
-      console.warn(`Kapwa CSS source not found at ${sourcePath}`);
+      console.warn(`Default CSS source not found at ${sourcePath}`);
       return;
     }
 
     fs.mkdirSync(destinationDir, { recursive: true });
     fs.copyFileSync(sourcePath, destinationPath);
 
-    console.log('✅ kapwa.css successfully copied');
+    console.log('✅ index.css successfully copied');
+  },
+});
+
+const copyThemeCssPlugin = (): PluginOption => ({
+  name: 'copy-theme-css',
+  apply: 'build',
+  closeBundle() {
+    const themeConfig = {
+      source: './src/styles/kapwa.css',
+      destination: './dist/kapwa.css',
+    };
+    const fontConfig = {
+      source: './src/styles/kapwa-fonts.css',
+      destination: './dist/kapwa-fonts.css',
+    };
+    const configs = [themeConfig, fontConfig];
+
+    configs.forEach(({ source, destination }) => {
+      const sourcePath = path.resolve(__dirname, source);
+      const destinationDir = path.resolve(__dirname, './dist');
+      const destinationPath = path.resolve(
+        destinationDir,
+        path.basename(destination)
+      );
+
+      if (!fs.existsSync(sourcePath)) {
+        console.warn(`CSS source not found at ${sourcePath}`);
+        return;
+      }
+
+      fs.mkdirSync(destinationDir, { recursive: true });
+      fs.copyFileSync(sourcePath, destinationPath);
+
+      console.log(`✅ ${path.basename(destination)} successfully copied`);
+    });
   },
 });
 
@@ -72,7 +107,8 @@ export default defineConfig({
         };
       },
     }),
-    copyKapwaCssPlugin(),
+    copyDefaultCssPlugin(),
+    copyThemeCssPlugin(),
   ],
   build: {
     minify: true,
