@@ -48,18 +48,6 @@ async function generateComponentExports() {
 
   console.log('  ✓ ./default-styles');
 
-  exportsMap['./theme-styles'] = {
-    style: './dist/kapwa.css',
-  };
-
-  console.log('  ✓ ./theme-styles');
-
-  exportsMap['./theme-fonts'] = {
-    style: './dist/kapwa-fonts.css',
-  };
-
-  console.log('  ✓ ./theme-fonts');
-
   // Scan components
   console.log('🔍 Scanning components in src/lib/kapwa/...');
   const componentsSrcDir = resolve('src', 'lib', 'kapwa');

@@ -1,0 +1,15 @@
+@import './index.css';
+
+/* 
+NOTE: uncomment to override default font styles:
+
+--default-font-family: var(--font-sans);
+--default-mono-font-family: var(--font-mono);
+*/
+
+/*
+@theme inline {
+  --font-sans: var(--font-kapwa-sans);
+  --font-mono: var(--font-kapwa-mono);
+} 
+*/

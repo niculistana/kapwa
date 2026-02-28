@@ -28,8 +28,6 @@ _Design system for Government Portals used by BetterGov.ph_
 
    + @source '../node_modules/@bettergov/kapwa/dist';
    + @import "@bettergov/kapwa/default-styles";
-   + @import "@bettergov/kapwa/theme-styles";
-   + @import "@bettergov/kapwa/theme-fonts";
    ```
 
    > _Without the @source you can't use @bettergov/kapwa's tailwind classes (i.e. kapwa colors, spacing, and others)_
@@ -84,12 +82,11 @@ It's better to have consumers load Kapwa's fonts themselves because:
     // Finally, add the CSS variable to your Tailwind CSS file
     @import 'tailwindcss';
     @import 'tw-animate-css';
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
 
     @source '../node_modules/@bettergov/kapwa/dist';
     @import "@bettergov/kapwa/default-styles";
-    @import "@bettergov/kapwa/theme-styles";
-    @import "@bettergov/kapwa/theme-fonts";
-
 
     @theme inline {
       --font-sans: var(--font-kapwa-sans);
