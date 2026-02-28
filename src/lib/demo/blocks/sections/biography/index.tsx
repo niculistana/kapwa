@@ -58,8 +58,18 @@ const BiographySection: React.FC<BiographySectionProps> = ({
       <CardContent>
         <OfficialBiography
           profile={biographyProfile}
-          contactButtonText='Contact Office'
-          websiteButtonText='Visit Website'
+          contactCta={{
+            text: 'Contact Office',
+            onClick: () => {
+              alert('Contact button clicked!');
+            },
+          }}
+          websiteCta={{
+            text: 'Visit Website',
+            onClick: () => {
+              window.open(biographyProfile.contactInfo.website, '_blank');
+            },
+          }}
         />
       </CardContent>
     </Card>

@@ -9,13 +9,13 @@ const meta: Meta<typeof OfficialBiography> = {
     layout: 'padded',
   },
   argTypes: {
-    contactButtonText: {
-      control: { type: 'text' },
-      description: 'Text for the contact button',
+    contactCta: {
+      text: { control: 'text' },
+      onClick: { action: 'contactCtaClicked' },
     },
-    websiteButtonText: {
-      control: { type: 'text' },
-      description: 'Text for the website button',
+    websiteCta: {
+      text: { control: 'text' },
+      onClick: { action: 'websiteCtaClicked' },
     },
   },
 };
@@ -147,23 +147,41 @@ const mayorProfile: BiographyProfile = {
 export const President: Story = {
   args: {
     profile: presidentProfile,
-    contactButtonText: 'Contact Office',
-    websiteButtonText: 'Visit Website',
+    contactCta: {
+      text: 'Contact Office',
+      onClick: () => {},
+    },
+    websiteCta: {
+      text: 'Visit Website',
+      onClick: () => {},
+    },
   },
 };
 
 export const Senator: Story = {
   args: {
     profile: senatorProfile,
-    contactButtonText: 'Contact Office',
-    websiteButtonText: 'Visit Website',
+    contactCta: {
+      text: 'Contact Office',
+      onClick: () => {},
+    },
+    websiteCta: {
+      text: 'Visit Website',
+      onClick: () => {},
+    },
   },
 };
 
 export const Mayor: Story = {
   args: {
     profile: mayorProfile,
-    contactButtonText: 'Contact Office',
-    websiteButtonText: 'Visit Website',
+    contactCta: {
+      text: 'Contact Office',
+      onClick: () => {},
+    },
+    websiteCta: {
+      text: 'Visit Website',
+      onClick: () => {},
+    },
   },
 };

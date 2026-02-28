@@ -28,14 +28,20 @@ export type BiographyProfile = {
 
 export type BiographyProps = {
   profile: BiographyProfile;
-  contactButtonText?: string;
-  websiteButtonText?: string;
+  contactCta?: {
+    text: string;
+    onClick: () => void;
+  };
+  websiteCta?: {
+    text: string;
+    onClick: () => void;
+  };
 };
 
 export const OfficialBiography = ({
   profile,
-  contactButtonText,
-  websiteButtonText,
+  contactCta,
+  websiteCta,
 }: BiographyProps) => {
   return (
     <div className='space-y-8'>
@@ -167,21 +173,25 @@ export const OfficialBiography = ({
                   </div>
                 </div>
 
-                {(contactButtonText || websiteButtonText) && (
+                {(contactCta || websiteCta) && (
                   <div className='flex space-x-4 mt-8'>
-                    {contactButtonText && (
-                      <Button className='bg-primary-600 hover:bg-primary-700 text-white'>
+                    {contactCta && (
+                      <Button
+                        className='bg-primary-600 hover:bg-primary-700 text-white'
+                        onClick={contactCta.onClick}
+                      >
                         <Mail className='h-4 w-4 mr-2' />
-                        {contactButtonText}
+                        {contactCta.text}
                       </Button>
                     )}
-                    {websiteButtonText && (
+                    {websiteCta && (
                       <Button
                         variant='outline'
                         className='border-gray-300 text-gray-700 hover:bg-gray-50'
+                        onClick={websiteCta.onClick}
                       >
                         <Globe className='h-4 w-4 mr-2' />
-                        {websiteButtonText}
+                        {websiteCta.text}
                       </Button>
                     )}
                   </div>
