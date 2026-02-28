@@ -15,6 +15,7 @@ import { BiographySection } from '../../blocks/sections/biography';
 import { CodeBlock } from '@ui/CodeBlock';
 import { libraryInstallCommands } from '@pages/utils/install-commands';
 import { Card, CardContent } from '@kapwa/card';
+import SEO from '@ui/SEO';
 
 const Blocks: React.FC = () => {
   const searchResults: ListSectionItem[] = [
@@ -116,102 +117,113 @@ const Blocks: React.FC = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gray-50 py-12'>
-      <div className='container mx-auto px-4'>
-        <h1 className='text-3xl font-bold text-gray-900 mb-8'>Blocks</h1>
-        <ListsSection
-          title='Search Results'
-          headerTitle='Lists'
-          headerSubtitle='Different list styles and search results'
-          listItems={searchResults}
-          externalLinkText='View'
-        />
+    <>
+      <SEO title='Blocks' description='' keywords={['blocks']} />
+      <div className='min-h-screen bg-gray-50 py-12'>
+        <div className='container mx-auto px-4'>
+          <h1 className='text-3xl font-bold text-gray-900 mb-8'>Blocks</h1>
+          <ListsSection
+            title='Search Results'
+            headerTitle='Lists'
+            headerSubtitle='Different list styles and search results'
+            listItems={searchResults}
+            externalLinkText='View'
+          />
 
-        <Card className='mb-8'>
-          <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Importing the component:</p>
-              <CodeBlock>{libraryInstallCommands.list.import}</CodeBlock>
-            </div>
-          </CardContent>
-        </Card>
-
-        <TablesSection
-          title='Tables'
-          subtitle='Table styles for data presentation'
-          tableData={tableData}
-        />
-
-        <Card className='mb-8'>
-          <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Importing the component:</p>
-              <CodeBlock>{libraryInstallCommands.table.import}</CodeBlock>
-            </div>
-          </CardContent>
-        </Card>
-
-        <ArticlesSection
-          headerTitle='Article Components'
-          headerSubtitle='Article cards and content styles'
-          articleCardTitle='Article Card'
-          articleCards={articleCards}
-          showArticleContent={true}
-          articleContentTitle='Article Content'
-          articleContent={articleContent}
-        />
-
-        <Card className='mb-8'>
-          <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Importing the components:</p>
-              <div className='space-y-4'>
-                <CodeBlock>{libraryInstallCommands.article.import}</CodeBlock>
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
+                <CodeBlock>{libraryInstallCommands.list.import}</CodeBlock>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
 
-        <BannersSection
-          headerTitle='Banner Components'
-          headerSubtitle='Banner and call-to-action components for community engagement'
-          stripBannerTitle='Strip Banner'
-          stripBanner={stripBanner}
-          fullBannerTitle='Full CivicTech Banner'
-          fullBanner={fullBanner}
-        />
+          <TablesSection
+            title='Tables'
+            subtitle='Table styles for data presentation'
+            tableData={tableData}
+          />
 
-        <Card className='mb-8'>
-          <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Importing the components:</p>
-              <div className='space-y-4'>
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
+                <CodeBlock>{libraryInstallCommands.table.import}</CodeBlock>
+              </div>
+            </CardContent>
+          </Card>
+
+          <ArticlesSection
+            headerTitle='Article Components'
+            headerSubtitle='Article cards and content styles'
+            articleCardTitle='Article Card'
+            articleCards={articleCards}
+            showArticleContent={true}
+            articleContentTitle='Article Content'
+            articleContent={articleContent}
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the components:
+                </p>
+                <div className='space-y-4'>
+                  <CodeBlock>{libraryInstallCommands.article.import}</CodeBlock>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <BannersSection
+            headerTitle='Banner Components'
+            headerSubtitle='Banner and call-to-action components for community engagement'
+            stripBannerTitle='Strip Banner'
+            stripBanner={stripBanner}
+            fullBannerTitle='Full CivicTech Banner'
+            fullBanner={fullBanner}
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the components:
+                </p>
+                <div className='space-y-4'>
+                  <CodeBlock>
+                    {libraryInstallCommands.stripBanner.import}
+                  </CodeBlock>
+                  <CodeBlock>
+                    {libraryInstallCommands.civicTechBanner.import}
+                  </CodeBlock>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <BiographySection
+            headerTitle='Official Biography'
+            headerSubtitle='Government official profile and official biography layout'
+          />
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>Installation via NPM:</p>
                 <CodeBlock>
-                  {libraryInstallCommands.stripBanner.import}
-                </CodeBlock>
-                <CodeBlock>
-                  {libraryInstallCommands.civicTechBanner.import}
+                  {libraryInstallCommands.officialBiography.import}
                 </CodeBlock>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-        <BiographySection
-          headerTitle='Official Biography'
-          headerSubtitle='Government official profile and official biography layout'
-        />
-        <Card className='mb-8'>
-          <CardContent>
-            <div className='grid grid-cols-1 mb-8'>
-              <p className='text-sm font-semibold'>Installation via NPM:</p>
-              <CodeBlock>
-                {libraryInstallCommands.officialBiography.import}
-              </CodeBlock>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 # Kapwa Design System
 
-_A design system for Government Portals used by BetterGov.ph_
+_Design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 

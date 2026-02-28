@@ -20,13 +20,13 @@ const JoinUs: React.FC = () => {
   return (
     <div className='min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50'>
       <Helmet>
-        <title>Join Us | BetterGov.ph</title>
+        <title>Join Us!</title>
         <meta
           name='description'
           content='Join BetterGov.ph—A volunteer-led civic tech initiative building open-source tools to make government more transparent, efficient, and accessible.'
         />
         <link rel='canonical' href='https://bettergov.ph/join-us' />
-        <meta property='og:title' content='Join Us | BetterGov.ph' />
+        <meta property='og:title' content='Join Us' />
         <meta
           property='og:description'
           content='Be part of a volunteer-led civic tech initiative building open-source projects for a better government.'
