@@ -4,21 +4,21 @@ _A design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 
-1. [Install Tailwind](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
+1. [Install tailwindcss and @tailwindcss/vite](https://tailwindcss.com/docs/installation/using-vite). Configure vite-plugin with Tailwind
 
-1. Install Kapwa
+2. Install Kapwa
 
    ```
    npm install @bettergov/kapwa
    ```
 
-1. Install tw-animate-css for animation (Optional)
+3. Install tw-animate-css for animation (Optional)
 
    ```
    npm install -D tw-animate-css
    ```
 
-1. Add Kapwa in your CSS entrypoint
+4. Add Kapwa in your CSS entrypoint
 
    ```diff
    // index.css
