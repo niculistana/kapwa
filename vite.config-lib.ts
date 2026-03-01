@@ -47,7 +47,7 @@ const copyThemeCssPlugin = (): PluginOption => ({
     fs.mkdirSync(destinationDir, { recursive: true });
     fs.copyFileSync(sourcePath, destinationPath);
 
-    console.log(`✅ ${path.basename('./dist/kapwa.css')} successfully copied`);
+    console.log(`✅ css successfully copied`);
   },
 });
 
@@ -117,6 +117,7 @@ export default defineConfig({
         'tailwindcss',
         'tw-animate-css',
         '@tailwindcss/postcss',
+        'lucide-react',
         'postcss',
       ],
     },
