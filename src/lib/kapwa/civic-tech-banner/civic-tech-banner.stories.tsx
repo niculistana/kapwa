@@ -33,9 +33,11 @@ export const Default: Story = {
       highlightedPhrase: 'Volunteer-led. Open source. Community-driven.',
       primaryButton: {
         text: 'Start Contributing',
+        href: '#',
       },
       secondaryButton: {
         text: 'Learn More',
+        href: '#',
       },
     },
   },
@@ -60,9 +62,11 @@ export const OpenSourceProject: Story = {
       highlightedPhrase: 'Code with purpose. Build with community.',
       primaryButton: {
         text: 'View Projects',
+        href: '#',
       },
       secondaryButton: {
         text: 'Join Discord',
+        href: '#',
       },
     },
   },
@@ -89,9 +93,11 @@ export const HackathonEvent: Story = {
         text: 'Register Now',
         className:
           'bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500',
+        href: '#',
       },
       secondaryButton: {
         text: 'View Schedule',
+        href: '#',
       },
     },
   },
@@ -116,9 +122,11 @@ export const VolunteerRecruitment: Story = {
       highlightedPhrase: 'No experience required. Just passion for change.',
       primaryButton: {
         text: 'Sign Up',
+        href: '#',
       },
       secondaryButton: {
         text: 'See Opportunities',
+        href: '#',
       },
     },
   },
@@ -143,9 +151,11 @@ export const DataTransparency: Story = {
       highlightedPhrase: 'Your tax money. Your right to know.',
       primaryButton: {
         text: 'Explore Data',
+        href: '#',
       },
       secondaryButton: {
         text: 'Report an Issue',
+        href: '#',
       },
     },
   },
@@ -170,9 +180,11 @@ export const CommunityImpact: Story = {
       highlightedPhrase: '10,000+ volunteers. 200+ communities reached.',
       primaryButton: {
         text: 'See Projects',
+        href: '#',
       },
       secondaryButton: {
         text: 'Read Stories',
+        href: '#',
       },
     },
   },
@@ -197,9 +209,11 @@ export const TrainingProgram: Story = {
       highlightedPhrase: 'For beginners to experts. All welcome.',
       primaryButton: {
         text: 'Enroll Now',
+        href: '#',
       },
       secondaryButton: {
         text: 'Browse Courses',
+        href: '#',
       },
     },
   },
@@ -226,11 +240,13 @@ export const EmergencyResponse: Story = {
         text: 'Get Help',
         className:
           'bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700',
+        href: '#',
       },
       secondaryButton: {
         text: 'Volunteer',
         className:
           'border-2 border-red-200 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-200 hover:text-gray-900',
+        href: '#',
       },
     },
   },

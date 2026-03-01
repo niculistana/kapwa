@@ -29,11 +29,10 @@ const HomePage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gray-50 py-12'>
       <SEO
-        title='Home | kapwa.bettergov.ph'
-        description=''
-        keywords={['website map']}
+        title='Home'
+        description='Main page for Kapwa Design System'
+        keywords={['home']}
       />
-
       <div className='container mx-auto px-4'>
         <div className='max-w-5xl mx-auto'>
           <div className='bg-white rounded-xl shadow-xs overflow-hidden'>

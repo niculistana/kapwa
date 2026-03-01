@@ -1,24 +1,24 @@
 # Kapwa Design System
 
-_A design system for bettergov.ph_
+_Design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 
-1. [Install Tailwind](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
+1. Install Tailwind CSS using the adapter for your bundler (for example, [`@tailwindcss/vite`](https://tailwindcss.com/docs/installation/using-vite) or [`@tailwindcss/postcss`](https://tailwindcss.com/docs/installation)). Follow the Tailwind docs to configure your build tool.
 
-1. Install Kapwa
+2. Install Kapwa
 
    ```
    npm install @bettergov/kapwa
    ```
 
-1. Install tw-animate-css for animation (Optional)
+3. Install tw-animate-css for animation (Optional)
 
    ```
    npm install -D tw-animate-css
    ```
 
-1. Add Kapwa in your CSS entrypoint
+4. Add Kapwa in your CSS entrypoint
 
    ```diff
    // index.css
@@ -26,11 +26,12 @@ _A design system for bettergov.ph_
    @import 'tailwindcss';
    @import 'tw-animate-css';
 
-   + @source './node_modules/@bettergov/kapwa';
-   + @import '@bettergov/kapwa/kapwa.css';
+   + @source '../node_modules/@bettergov/kapwa/dist';
+   + @import "@bettergov/kapwa/styles";
    ```
 
    > _Without the @source you can't use @bettergov/kapwa's tailwind classes (i.e. kapwa colors, spacing, and others)_
+   > See: https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources
 
 #### Loading Kapwa's fonts
 
@@ -52,7 +53,7 @@ It's better to have consumers load Kapwa's fonts themselves because:
    export const kapwaSans = Inter({
      subsets: ['latin'],
      weight: ['400', '500', '600', '700'],
-     variable: '--font-kapw-sans',
+     variable: '--font-kapwa-sans',
      display: 'swap',
    });
 
@@ -81,10 +82,11 @@ It's better to have consumers load Kapwa's fonts themselves because:
     // Finally, add the CSS variable to your Tailwind CSS file
     @import 'tailwindcss';
     @import 'tw-animate-css';
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
 
-    @source './node_modules/@bettergov/kapwa';
-    @import '@bettergov/kapwa/kapwa.css';
 
+    @source '../node_modules/@bettergov/kapwa/dist';
+    @import "@bettergov/kapwa/styles";
 
     @theme inline {
       --font-sans: var(--font-kapwa-sans);

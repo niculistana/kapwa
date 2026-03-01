@@ -9,7 +9,7 @@ export const footerNavigation = {
       links: [
         { label: 'Accessibility', href: '/accessibility' },
         { label: 'Terms of Use', href: '/terms-of-service' },
-        { label: 'Contact Us', href: '/about' },
+        { label: 'About BetterGov.ph', href: '/about' },
       ],
     },
   ],

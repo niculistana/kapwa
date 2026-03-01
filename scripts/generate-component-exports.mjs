@@ -42,6 +42,12 @@ async function generateComponentExports() {
   typesVersionsMap['.'] = ['./dist/index.d.ts'];
   console.log('  ✓ . (main)');
 
+  exportsMap['./styles'] = {
+    default: './dist/index.css',
+  };
+
+  console.log('  ✓ ./styles');
+
   // Scan components
   console.log('🔍 Scanning components in src/lib/kapwa/...');
   const componentsSrcDir = resolve('src', 'lib', 'kapwa');

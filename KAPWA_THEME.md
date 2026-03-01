@@ -19,7 +19,7 @@ src/
 
 ### Typography
 
-- **Font Families**: `--font-family-sans`, `--font-family-mono`, `--font-family-display`
+- **Font Families**: `--font-kapwa-sans`, `--font-kapwa-mono`
 - **Font Sizes**: `--font-size-xs` to `--font-size-9xl` (12px to 128px)
 - **Line Heights**: `--line-height-none` to `--line-height-loose`
 - **Font Weights**: `--font-weight-thin` to `--font-weight-black`

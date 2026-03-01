@@ -9,8 +9,8 @@
   ],
   "files": [
     {
-      "path": "src/lib/demo/blocks/tables/index.tsx",
-      "content": "import React from 'react';\nimport { Table, TableDataItem } from '@kapwa/table';\n\ntype TablesSectionProps = {\n  title: string;\n  subtitle?: string;\n  tableData: TableDataItem[];\n};\n\nconst TablesSection: React.FC<TablesSectionProps> = ({\n  title,\n  subtitle,\n  tableData,\n}: TablesSectionProps) => {\n  return (\n    <Table title={title} subtitle={subtitle || ''} tableData={tableData} />\n  );\n};\n\nexport { TablesSection };\nexport type { TableDataItem, TablesSectionProps };\n",
+      "path": "src/lib/demo/blocks/sections/tables/index.tsx",
+      "content": "import React from 'react';\nimport { Table, TableDataItem } from '@kapwa/table';\nimport { Card, CardContent } from '@kapwa/card';\n\ntype TablesSectionProps = {\n  title: string;\n  subtitle?: string;\n  tableData: TableDataItem[];\n};\n\nconst TablesSection: React.FC<TablesSectionProps> = ({\n  title,\n  subtitle,\n  tableData,\n}: TablesSectionProps) => {\n  return (\n    <Card className='mb-2'>\n      <CardContent>\n        <Table title={title} subtitle={subtitle || ''} tableData={tableData} />\n      </CardContent>\n    </Card>\n  );\n};\n\nexport { TablesSection };\nexport type { TableDataItem, TablesSectionProps };\n",
       "type": "registry:block"
     }
   ],

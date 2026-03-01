@@ -11,12 +11,11 @@ i18n
     fallbackLng: 'en',
     debug: false,
     defaultNS: 'common',
-    ns: ['common', 'visa', 'about', 'about-philippines'],
-
+    ns: ['common', 'about'],
+    load: 'languageOnly',
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
