@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import {
   Scale,
   Shield,
@@ -8,6 +7,7 @@ import {
   Mail,
   ExternalLink,
 } from 'lucide-react';
+import SEO from '@ui/SEO';
 
 const TermsOfService: React.FC = () => {
   const currentDate = new Date().toLocaleDateString('en-US', {
@@ -18,26 +18,11 @@ const TermsOfService: React.FC = () => {
 
   return (
     <div className='min-h-screen bg-gray-50'>
-      <Helmet>
-        <title>Terms of Service | BetterGov.ph</title>
-        <meta
-          name='description'
-          content='Terms of Service for BetterGov.ph - Public domain content, volunteer operation, and user responsibilities for accessing government information.'
-        />
-        <link rel='canonical' href='https://bettergov.ph/terms-of-service' />
-        <meta property='og:title' content='Terms of Service | BetterGov.ph' />
-        <meta
-          property='og:description'
-          content='Terms of Service for BetterGov.ph - Public domain content and volunteer operation guidelines.'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:url'
-          content='https://bettergov.ph/terms-of-service'
-        />
-        <meta property='og:image' content='https://bettergov.ph/ph-logo.webp' />
-      </Helmet>
-
+      <SEO
+        title='Terms of Service'
+        description='Terms of Service for BetterGov.ph - Public domain content, volunteer operation, and user responsibilities for accessing government information.'
+        keywords={['terms of service', 'public domain', 'volunteer operation']}
+      />
       {/* Header Section */}
       <section className='bg-gradient-to-r from-primary-600 to-blue-700 text-white py-16'>
         <div className='container mx-auto px-4'>

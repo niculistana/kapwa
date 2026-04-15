@@ -29,18 +29,21 @@ const HomePage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gray-50 py-12'>
       <SEO
-        title='Home | kapwa.bettergov.ph'
-        description=''
-        keywords={['website map']}
+        title='Home'
+        description='Main page for Kapwa Design System'
+        keywords={['home']}
       />
-
       <div className='container mx-auto px-4'>
         <div className='max-w-5xl mx-auto'>
           <div className='bg-white rounded-xl shadow-xs overflow-hidden'>
             <div className='p-6 md:p-8 border-b border-gray-200'>
               <h1 className='text-3xl font-bold text-gray-900'>Home</h1>
               <p className='mt-2 text-gray-800'>
-                Welcome to Kapwa: Design System for BetterGov.ph
+                Welcome to Kapwa, a Design System for Government Portals.
+                Explore our comprehensive design resources, including
+                components, blocks, and tokens. Whether you&apos;re a designer
+                or a developer, Kapwa provides the tools you need to build
+                better digital experiences.
               </p>
             </div>
 

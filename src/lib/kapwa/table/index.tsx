@@ -1,5 +1,4 @@
-import React from 'react';
-import { Card, CardHeader, CardContent } from '@kapwa/card';
+import { Card, CardContent, CardHeader } from '@kapwa/card';
 import { Button } from '@kapwa/button';
 
 type TableDataItem = {
@@ -9,17 +8,15 @@ type TableDataItem = {
   status: 'Active' | 'Pending' | 'Inactive';
 };
 
-type TablesSectionProps = {
-  title: string;
-  subtitle?: string;
-  tableData: TableDataItem[];
-};
-
-const TablesSection: React.FC<TablesSectionProps> = ({
+const Table = ({
   title,
   subtitle,
   tableData,
-}: TablesSectionProps) => {
+}: {
+  title: string;
+  subtitle: string;
+  tableData: TableDataItem[];
+}) => {
   return (
     <Card className='mb-8'>
       <CardHeader>
@@ -27,7 +24,7 @@ const TablesSection: React.FC<TablesSectionProps> = ({
         <p className='text-gray-800'>{subtitle}</p>
       </CardHeader>
       <CardContent>
-        <div className='overflow-x-auto'>
+        <div className='overflow-x-auto space-y-8'>
           <table className='min-w-full divide-y divide-gray-200'>
             <thead className='bg-gray-50'>
               <tr>
@@ -84,5 +81,5 @@ const TablesSection: React.FC<TablesSectionProps> = ({
   );
 };
 
-export { TablesSection };
-export type { TableDataItem, TablesSectionProps };
+export { Table };
+export type { TableDataItem };

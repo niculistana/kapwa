@@ -42,22 +42,11 @@ async function generateComponentExports() {
   typesVersionsMap['.'] = ['./dist/index.d.ts'];
   console.log('  ✓ . (main)');
 
-  // Add utils entry point
-  exportsMap['./lib/utils'] = buildExportEntry({
-    types: './dist/lib/utils.d.ts',
-    esmPath: './dist/lib/utils.js',
-    cjsPath: './dist/lib/utils.cjs',
-  });
-  typesVersionsMap['lib/utils'] = ['./dist/lib/utils.d.ts'];
-  console.log('  ✓ ./lib/utils\n');
+  exportsMap['./styles'] = {
+    default: './dist/index.css',
+  };
 
-  // Legacy utils alias
-  exportsMap['./utils'] = buildExportEntry({
-    types: './dist/lib/utils.d.ts',
-    esmPath: './dist/lib/utils.js',
-    cjsPath: './dist/lib/utils.cjs',
-  });
-  typesVersionsMap['utils'] = ['./dist/lib/utils.d.ts'];
+  console.log('  ✓ ./styles');
 
   // Scan components
   console.log('🔍 Scanning components in src/lib/kapwa/...');
@@ -137,7 +126,6 @@ async function generateComponentExports() {
 
   let indexFileContent =
     '// This file is auto-generated - do not edit directly\n\n';
-  indexFileContent += "// Utilities\nexport * from './lib/utils';\n\n";
   indexFileContent += '// Components\n';
   indexFileContent += componentExports.join('\n');
   indexFileContent += '\n';

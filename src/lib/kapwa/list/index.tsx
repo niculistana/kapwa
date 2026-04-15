@@ -1,6 +1,5 @@
-import React from 'react';
-import { Card, CardHeader, CardContent } from '@kapwa/card';
 import { Button } from '@kapwa/button';
+import { Card, CardHeader, CardContent } from '@kapwa/card';
 import { ExternalLink } from 'lucide-react';
 
 type ListSectionItem = {
@@ -17,22 +16,27 @@ type ListsSectionProps = {
   listItems: ListSectionItem[];
 };
 
-const ListsSection: React.FC<ListsSectionProps> = ({
-  title,
+const List = ({
   headerTitle,
   headerSubtitle,
   externalLinkText,
   listItems,
-}: ListsSectionProps) => {
+  title,
+}: {
+  title: string;
+  headerTitle: string;
+  headerSubtitle?: string;
+  externalLinkText?: string;
+  listItems: ListSectionItem[];
+}) => {
   return (
-    <Card className='mb-8'>
+    <Card>
       <CardHeader>
         <h2 className='text-2xl font-semibold'>{headerTitle}</h2>
         {headerSubtitle && <p className='text-gray-800'>{headerSubtitle}</p>}
       </CardHeader>
       <CardContent>
         <div className='space-y-8'>
-          {/* Search Results List */}
           <div>
             <h3 className='font-medium mb-4'>{title}</h3>
             <div className='space-y-4'>
@@ -67,5 +71,5 @@ const ListsSection: React.FC<ListsSectionProps> = ({
   );
 };
 
-export { ListsSection };
-export type { ListSectionItem, ListsSectionProps };
+export { List };
+export type { ListsSectionProps, ListSectionItem };

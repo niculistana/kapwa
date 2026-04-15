@@ -130,7 +130,7 @@ const AccessibilityPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gray-50 py-12'>
       <SEO
-        title='Accessibility Statement | BetterGov.ph'
+        title='Accessibility Statement'
         description="Learn about BetterGov.ph's commitment to web accessibility, including WCAG compliance, accessibility features, and how to request assistance."
         keywords={[
           'accessibility',

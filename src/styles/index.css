@@ -1,5 +1,4 @@
 /* Fonts must be imported first */
-@import './kapwa-fonts.css';
 @import 'tailwindcss';
 @import './kapwa.css';
 

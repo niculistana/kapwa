@@ -1,17 +1,21 @@
 import React from 'react';
-import { ListsSection, ListSectionItem } from '../../blocks/lists';
-import { TablesSection, TableDataItem } from '../../blocks/tables';
+import { ListsSection, ListSectionItem } from '../../blocks/sections/lists';
+import { TablesSection, TableDataItem } from '../../blocks/sections/tables';
 import {
   ArticlesSection,
   ArticleCardItem,
   ArticleContentSection,
-} from '../../blocks/articles';
+} from '../../blocks/sections/articles';
 import {
   BannersSection,
   StripBannerItem,
   FullBannerItem,
-} from '../../blocks/banners';
-import { BiographySection, BiographyProfile } from '../../blocks/biography';
+} from '../../blocks/sections/banners';
+import { BiographySection } from '../../blocks/sections/biography';
+import { CodeBlock } from '@ui/CodeBlock';
+import { libraryInstallCommands } from '@pages/utils/install-commands';
+import { Card, CardContent } from '@kapwa/card';
+import SEO from '@ui/SEO';
 
 const Blocks: React.FC = () => {
   const searchResults: ListSectionItem[] = [
@@ -82,10 +86,12 @@ const Blocks: React.FC = () => {
       text: 'Join Now',
       className:
         'bg-gray-100 text-gray-800 px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-gray-200',
+      href: '#',
     },
     secondaryLink: {
       text: 'Discord',
       className: 'text-xs text-orange-200 underline',
+      href: '#',
     },
   };
 
@@ -100,94 +106,126 @@ const Blocks: React.FC = () => {
       text: 'Join Our Movement',
       className:
         'bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100',
+      href: '#',
     },
     secondaryButton: {
       text: 'Join Discord',
       className:
         'border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900',
+      href: '#',
     },
-  };
-
-  const biographyProfile: BiographyProfile = {
-    name: 'Ferdinand Marcos Jr.',
-    position: '17th President of the Republic of the Philippines',
-    servingSince: 'Serving since June 30, 2022',
-    profileImage:
-      'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
-    bannerImage:
-      'https://images.pexels.com/photos/1714455/pexels-photo-1714455.jpeg',
-    contactInfo: {
-      office: 'Malacañang Palace, Manila',
-      phone: '+63 (2) 8736 8645',
-      email: 'op@president.gov.ph',
-      website: 'www.president.gov.ph',
-    },
-    education: [
-      {
-        degree: 'Bachelor of Arts in Political Science',
-        institution: 'University of Oxford',
-        year: '1975',
-      },
-      {
-        degree: 'Master in Business Administration',
-        institution: 'Wharton School of Business',
-        year: '1979',
-      },
-    ],
-    biography: [
-      'Ferdinand "Bongbong" Romualdez Marcos Jr. serves as the 17th President of the Philippines, assuming office on June 30, 2022. As the country\'s chief executive, he leads the implementation of laws and policies aimed at national development and public welfare.',
-      'Prior to his presidency, he served in various government positions including as a Senator of the Philippines from 2010 to 2016, and as Governor of Ilocos Norte. His administration focuses on economic recovery, infrastructure development, and digital transformation of government services.',
-    ],
-    achievements: [
-      'Led the implementation of digital transformation initiatives across government agencies',
-      'Established international partnerships for economic cooperation',
-      'Launched nationwide infrastructure development programs',
-      'Reformed tax collection systems for improved efficiency',
-    ],
   };
 
   return (
-    <div className='min-h-screen bg-gray-50 py-12'>
-      <div className='container mx-auto px-4'>
-        <h1 className='text-3xl font-bold text-gray-900 mb-8'>Blocks</h1>
-        <ListsSection
-          title='Search Results'
-          headerTitle='Lists'
-          headerSubtitle='Different list styles and search results'
-          listItems={searchResults}
-          externalLinkText='View'
-        />
-        <TablesSection
-          title='Tables'
-          subtitle='Table styles for data presentation'
-          tableData={tableData}
-        />
-        <ArticlesSection
-          headerTitle='Article Components'
-          headerSubtitle='Article cards and content styles'
-          articleCardTitle='Article Card'
-          articleCards={articleCards}
-          showArticleContent={true}
-          articleContentTitle='Article Content'
-          articleContent={articleContent}
-        />
-        <BannersSection
-          headerTitle='CivicTech Components'
-          headerSubtitle='Banner and call-to-action components for community engagement'
-          stripBannerTitle='Strip Banner'
-          stripBanner={stripBanner}
-          fullBannerTitle='Full CivicTech Banner'
-          fullBanner={fullBanner}
-        />
-        <BiographySection
-          headerTitle='Official Biography'
-          headerSubtitle='Government official profile and biography layout'
-          profile={biographyProfile}
-          contactButtonText='Contact Office'
-          websiteButtonText='Visit Website'
-        />
+    <>
+      <SEO title='Blocks' description='' keywords={['blocks']} />
+      <div className='min-h-screen bg-gray-50 py-12'>
+        <div className='container mx-auto px-4'>
+          <h1 className='text-3xl font-bold text-gray-900 mb-8'>Blocks</h1>
+          <ListsSection
+            title='Search Results'
+            headerTitle='Lists'
+            headerSubtitle='Different list styles and search results'
+            listItems={searchResults}
+            externalLinkText='View'
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
+                <CodeBlock>{libraryInstallCommands.list.import}</CodeBlock>
+              </div>
+            </CardContent>
+          </Card>
+
+          <TablesSection
+            title='Tables'
+            subtitle='Table styles for data presentation'
+            tableData={tableData}
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
+                <CodeBlock>{libraryInstallCommands.table.import}</CodeBlock>
+              </div>
+            </CardContent>
+          </Card>
+
+          <ArticlesSection
+            headerTitle='Article Components'
+            headerSubtitle='Article cards and content styles'
+            articleCardTitle='Article Card'
+            articleCards={articleCards}
+            showArticleContent={true}
+            articleContentTitle='Article Content'
+            articleContent={articleContent}
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the components:
+                </p>
+                <div className='space-y-4'>
+                  <CodeBlock>{libraryInstallCommands.article.import}</CodeBlock>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <BannersSection
+            headerTitle='Banner Components'
+            headerSubtitle='Banner and call-to-action components for community engagement'
+            stripBannerTitle='Strip Banner'
+            stripBanner={stripBanner}
+            fullBannerTitle='Full CivicTech Banner'
+            fullBanner={fullBanner}
+          />
+
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the components:
+                </p>
+                <div className='space-y-4'>
+                  <CodeBlock>
+                    {libraryInstallCommands.stripBanner.import}
+                  </CodeBlock>
+                  <CodeBlock>
+                    {libraryInstallCommands.civicTechBanner.import}
+                  </CodeBlock>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <BiographySection
+            headerTitle='Official Biography'
+            headerSubtitle='Government official profile and official biography layout'
+          />
+          <Card className='mb-8'>
+            <CardContent>
+              <div className='grid grid-cols-1 mb-8'>
+                <p className='text-sm font-semibold'>
+                  Importing the component:
+                </p>
+                <CodeBlock>
+                  {libraryInstallCommands.officialBiography.import}
+                </CodeBlock>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 # Kapwa Design System
 
-_A design system for bettergov.ph_
+_Design system for Government Portals used by BetterGov.ph_
 
 ## Installation
 
@@ -77,6 +77,7 @@ The easiest way to add Kapwa components to your project is using the shadcn CLI:
    ```
 
    > _Without the @source you can't use @bettergov/kapwa's tailwind classes (i.e. kapwa colors, spacing, and others)_
+   > See: https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources
 
 #### Loading Kapwa's fonts
 
@@ -98,7 +99,7 @@ It's better to have consumers load Kapwa's fonts themselves because:
    export const kapwaSans = Inter({
      subsets: ['latin'],
      weight: ['400', '500', '600', '700'],
-     variable: '--font-kapw-sans',
+     variable: '--font-kapwa-sans',
      display: 'swap',
    });
 

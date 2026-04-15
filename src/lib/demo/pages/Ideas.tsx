@@ -109,7 +109,7 @@ const Ideas: React.FC = () => {
   return (
     <div className='min-h-screen bg-gray-50'>
       <Helmet>
-        <title>Project Ideas | BetterGov.ph</title>
+        <title>Project Ideas</title>
         <meta
           name='description'
           content='Explore innovative project ideas to improve government transparency, accountability, and citizen engagement in the Philippines.'
@@ -121,7 +121,7 @@ const Ideas: React.FC = () => {
         <link rel='canonical' href='https://bettergov.ph/ideas' />
 
         {/* Open Graph / Social */}
-        <meta property='og:title' content='Project Ideas | BetterGov.ph' />
+        <meta property='og:title' content='Project Ideas' />
         <meta
           property='og:description'
           content='Explore innovative project ideas to improve government transparency, accountability, and citizen engagement in the Philippines.'

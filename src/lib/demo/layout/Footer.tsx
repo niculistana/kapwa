@@ -16,7 +16,7 @@ export const footerNavigation = {
       links: [
         { label: 'Accessibility', href: '/accessibility' },
         { label: 'Terms of Use', href: '/terms-of-service' },
-        { label: 'Contact Us', href: '/about' },
+        { label: 'About BetterGov.ph', href: '/about' },
       ],
     },
   ],
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               <div>
                 <div className='font-bold'>Kapwa Design System</div>
                 <div className='text-xs text-gray-400'>
-                  A design system for bettergov.ph
+                  Design system for government portals
                 </div>
               </div>
             </div>

@@ -1,3 +1,37 @@
+## [1.2.4](https://github.com/bettergovph/kapwa/compare/v1.2.3...v1.2.4) (2026-03-01)
+
+### Bug Fixes
+
+- address copilot feedback ([9e31083](https://github.com/bettergovph/kapwa/commit/9e3108381d5ecd3a5cf33bc9dced2f8cee6bc037))
+- address copilot feedback ([a911571](https://github.com/bettergovph/kapwa/commit/a911571a4b7b953328591f0697838a4899aed4a5))
+- copyright footer, dependencies ([9d82e46](https://github.com/bettergovph/kapwa/commit/9d82e46a1f30010e3e1412c2c3f2ae4e19e74a0e))
+- font importing ([76276c3](https://github.com/bettergovph/kapwa/commit/76276c3a04fb73e53eb43b0988b51432863ad75b))
+- official biography buttons ([8da9090](https://github.com/bettergovph/kapwa/commit/8da9090a17453188648cacaa4268e9d24d9c059f))
+- regenerate package.lock ([270d96c](https://github.com/bettergovph/kapwa/commit/270d96c4b5482c1ec7d983646954bff4d9cd32db))
+- remove unused exports; remove Nuqs to reduce bundle size ([3faf381](https://github.com/bettergovph/kapwa/commit/3faf381747005a75f6a773c551c5d93405fa1f9b))
+- seo ([ac37ba9](https://github.com/bettergovph/kapwa/commit/ac37ba9decafd97603f93772b47d50d6480ce0cf))
+- start command ([1cde30b](https://github.com/bettergovph/kapwa/commit/1cde30bb5dceb91bafee79defa00963b3f2e589c))
+- update style export ([bb0becf](https://github.com/bettergovph/kapwa/commit/bb0becf19592d8645984e57e1d639a691b58234e))
+
+## [1.2.3](https://github.com/bettergovph/kapwa/compare/v1.2.2...v1.2.3) (2026-02-27)
+
+### Bug Fixes
+
+- apply copilot fixes ([80d4dec](https://github.com/bettergovph/kapwa/commit/80d4dec14baf25cf956223e3f381d3f85b44315b))
+
+## [1.2.2](https://github.com/bettergovph/kapwa/compare/v1.2.1...v1.2.2) (2026-02-21)
+
+### Bug Fixes
+
+- add new components to build ([30cb20a](https://github.com/bettergovph/kapwa/commit/30cb20afc187527c38f92ba99349f3ce55a6c23e))
+- implement copilot suggestions ([cc413e4](https://github.com/bettergovph/kapwa/commit/cc413e4b2e8208d720d89fb93a9f86a75418e534))
+
+## [1.2.1](https://github.com/bettergovph/kapwa/compare/v1.2.0...v1.2.1) (2026-02-21)
+
+### Bug Fixes
+
+- address few copilot suggestions ([af02984](https://github.com/bettergovph/kapwa/commit/af02984b7ebd786deeab0281a07ac25b0ac35df0))
+
 # [1.2.0](https://github.com/bettergovph/kapwa/compare/v1.1.0...v1.2.0) (2026-02-20)
 
 ### Bug Fixes
