@@ -30,11 +30,10 @@
       <a href="#contribution-workflow">Contribution Workflow</a>
       <ul>
         <li><a href="#fork-and-clone-repositories">Fork and clone repositories</a></li>
+        <li><a href="#sync-often">Sync often</a></li>
         <li><a href="#commit-messages">Commit messages</a></li>
-        <li><a href="#commit-messages">Branch creation</a></li>
-        <li><a href="#commit-messages">Pull requests</a></li>
-        <li><a href="#commit-messages">Commit messages</a></li>
-        <li><a href="#commit-messages">Commit messages</a></li>
+        <li><a href="#branch-creation">Branch creation</a></li>
+        <li><a href="#pull-requests">Pull requests</a></li>
       </ul>
     </li>
     <li><a href="#resources">Resources</a></li>
@@ -162,27 +161,43 @@ Read our {name and link to your style guide} to understand our guidelines for wr
 
 ### Fork and clone repositories
 
-To contribute, first fork the repository to your own GitHub account, then clone your fork to your local machine.
+To contribute, first fork the repository to your own GitHub account, then clone your fork to your local machine:
+
+```sh
+git clone git@github.com:<your-github-username>/kapwa.git
+cd kapwa
+```
+
+After cloning your fork, add the main Kapwa repository as `upstream`:
+
+```sh
+git remote add upstream git@github.com:bettergovph/kapwa.git
+git remote -v
+```
+
+You should now have:
+
+- `origin` pointing to your fork
+- `upstream` pointing to the main Kapwa repository
 
 Follow this guide for step-by-step instructions:
 [Fork a repository][forking]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Report issues and bugs
+### Sync often
 
-If you encounter a problem with the project, please open an issue in this [repository][issues].
+Pull the latest updates from the main repository often, especially before starting new work and before opening a pull request:
 
-When reporting an issue, please include the following details to help us investigate:
+```sh
+git checkout main
+git pull upstream main
+git push origin main
+```
 
-- Description – A clear and concise explanation of the problem.
-- Steps to reproduce – How to reproduce the issue (step by step).
-- Expected behavior – What you thought should happen.
-- Actual behavior – What actually happened instead.
-- Environment details – Your operating system, browser (if applicable), Node.js version, etc.
-- Screenshots or logs – If relevant, add screenshots or error logs.
+This keeps your forked `main` branch current with the original repository.
 
-> Tip: Check existing issues before creating a new one to avoid duplicates.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Commit messages
 
@@ -217,6 +232,14 @@ docs: add CONTRIBUTING.md and CODE_OF_CONDUCT.md
 
 ### Branch creation
 
+Create your working branch from your synced `main` branch:
+
+```sh
+git checkout main
+git pull upstream main
+git checkout -b fix/short-description
+```
+
 We follow a prefix-based branch naming convention for clarity:
 
 #### Format
@@ -241,27 +264,35 @@ docs/add-contributing-and-code-of-conduct
 
 We use Pull Requests (PRs) to review and merge changes. Follow these steps when creating a PR:
 
-1. Fork the repository and create a branch based on the type of work (feature/, fix/, docs/, etc.).
+1. Fork the repository and create a branch from your synced `main`.
 2. Make your changes and ensure your code passes linting and tests.
 3. Commit your changes following the Conventional Commits
    standard.
 4. Push your branch to your forked repository:
    ```sh
-   git push origin <branch-name>
+   git push -u origin <branch-name>
    ```
 5. Open a Pull Request to the main repository:
 
-- Target the main branch (or the branch specified by maintainers).
+- Target `bettergovph/kapwa:main` unless maintainers specify a different base branch.
 - Provide a clear title and detailed description of your changes.
 - Reference any related issues (e.g., Closes #12).
 
-6. Wait for review:
+6. If `main` moves while your PR is open, update your branch with the latest upstream changes:
+
+   ```sh
+   git checkout <branch-name>
+   git pull upstream main
+   git push origin <branch-name>
+   ```
+
+7. Wait for review:
 
 - Maintain open communication with reviewers.
 
-- Make any requested changes by committing to the same branch—the PR will update automatically.
+- Make any requested changes by committing to the same branch. The PR will update automatically.
 
-7. A maintainer will merge your PR once it’s approved.
+8. A maintainer will merge your PR once it’s approved.
    **Do not merge your own PR unless explicitly allowed.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
