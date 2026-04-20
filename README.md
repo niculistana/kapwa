@@ -207,6 +207,7 @@ Please see our [Contributing Guide](./CONTRIBUTING.md) for details on:
 - Development setup
 - Reporting bugs
 - Opening issues and pull requests
+- Local contributor setup in [docs/LOCAL_DEVELOPMENT.md](./docs/LOCAL_DEVELOPMENT.md)
 
 ## Contributing
 
